@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.player-card {
+border: 2em solid black;
+padding: 5em;
+background-color: blue;
+}
+
+.player-card img {
+
+  height: 50em;
+ width: 50em;
+}
