@@ -5,15 +5,23 @@
   text-align: center;
 }
 
-
 .player-card {
-border: 2em solid black;
-padding: 5em;
-background-color: blue;
+  border: 0.2em solid  rgb(211, 211, 60);
+  padding: 5em;
+  background-color: rgb(8, 75, 18);
 }
 
 .player-card img {
+  height: 20em;
+  width: 20em;
+  border: 0.2em solid rgb(211, 211, 60);
+}
 
-  height: 50em;
- width: 50em;
+.form {
+
+  background-color: rgb(211, 211, 60);
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+
 }

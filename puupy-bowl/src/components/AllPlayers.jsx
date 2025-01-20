@@ -1,20 +1,17 @@
 import SinglePlayer from "./SinglePlayer";
-import { useEffect, useState } from "react";
-import { getPlayers } from "../api";
+import { useEffect } from "react";
 import React from "react";
 
-export default function AllPlayers() {
-  const [players, setPlayers] = useState([]);
+export default function AllPlayers({getData, players}) {
+
 
   useEffect(() => {
-    async function getData() {
-      const playerData = await getPlayers();
-      setPlayers(playerData);
-    }
-    getData();
+   getData();
   }, []);
 
+
+
   return players.map((player) => {
-    return <SinglePlayer key={players.id} player={player} />;
+    return <SinglePlayer key={player.id} player={player} />;
   });
 }
