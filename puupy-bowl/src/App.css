@@ -5,7 +5,24 @@
   text-align: center;
 }
 
+.header{
+
+  color:  rgb(8, 75, 18);
+  
+}
+
+body{
+
+background-color:  rgb(211, 211, 60);
+}
+
+ .allPlayers{
+/* display: grid;
+grid-template-columns: repeat(3, 1fr); */
+ }
+
 .player-card {
+
   border: 0.2em solid  rgb(211, 211, 60);
   padding: 5em;
   background-color: rgb(8, 75, 18);
@@ -24,4 +41,6 @@
   flex-direction: column;
   justify-content: center;
 
+
 }
+

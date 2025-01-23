@@ -45,3 +45,17 @@ export async function deletePlayer(playerId) {
     console.error(err);
   }
 }
+
+export async function getPlayerId(id) {
+try {
+  const response = await fetch(`${BASE_API}/players/${id}`);
+  const json = await response.json();
+ const result = json.data;
+  return result.player;
+} catch (error) {
+  console.error(error)
+  
+}
+
+ 
+}
