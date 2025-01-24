@@ -17,15 +17,27 @@ export default function AddPlayerForm({ getData }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-console.log(formData)
+
     await addPlayer(formData);
     getData();
+
+    setFormData({
+      status: "bench",
+      imageUrl: "",
+      id: null,
+      name: "",
+      breed: "",
+      cohortId: 1,
+      updatedAt: null,
+      createdAt: null,
+      teamId: null,
+    })
   }
 
   return (
     <>
       <form onSubmit={handleSubmit} className="form">
-        <h2>Add Pup</h2>
+        <h2>Add a Pup</h2>
         <label>
           Name:
           <input

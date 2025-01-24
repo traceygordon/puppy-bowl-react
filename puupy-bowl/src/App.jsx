@@ -5,7 +5,7 @@ import { getPlayers } from "./api";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import PlayerDetails from "./components/PlayerDetails";
-import SearchBar from "./components/SearchBar";
+
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -21,7 +21,7 @@ function App() {
         <h2>Let's get ready to ruff-ble!</h2>
       </div>
       <AddPlayerForm getData={getData} />
-      <SearchBar players={players} getData={getData} />
+     
     
         <Routes>
           <Route
