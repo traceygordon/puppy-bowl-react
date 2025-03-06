@@ -3,14 +3,7 @@ import { useEffect } from "react";
 import React from "react";
 import { useState } from "react";
 
-
-export default function AllPlayers({getData, players}) {
-
-
-
-
-
-
+export default function AllPlayers({ getData, players }) {
   const [query, setQuery] = useState("");
 
   const handleSearch = (e) => {
@@ -26,7 +19,7 @@ export default function AllPlayers({getData, players}) {
 
   useEffect(() => {
     getData();
-   }, []);
+  }, []);
 
   return (
     <>
@@ -34,12 +27,11 @@ export default function AllPlayers({getData, players}) {
         <label>Search:</label>
         <input type="text" onChange={handleSearch} value={query} />
       </div>
-  <div>
+      <div>
         {filteredPlayers().map((player) => (
           <SinglePlayer key={player.id} player={player} getData={getData} />
         ))}
-      </div>  
+      </div>
     </>
   );
-};
-
+}
